@@ -1,0 +1,23 @@
+<!-- eventos.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eventos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onAddEvento()">Agregar Evento</ion-button>
+      <ion-button color="danger" (click)="onDeleteAllEventos()">Borrar Todos</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let evento of eventos">
+      <ion-label>
+        <h2>{{ evento.titulo }}</h2>
+        <p>{{ evento.fecha | date }}</p>
+        <p>{{ evento.descripcion }}</p>
+      </ion-label>
+      <ion-button fill="clear" slot="end" (click)="onGoToDetail(evento.id)">Ver Detalles</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

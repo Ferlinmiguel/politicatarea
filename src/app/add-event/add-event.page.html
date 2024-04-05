@@ -1,0 +1,32 @@
+<!-- add-event.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onAddEvent()">
+    <ion-item>
+      <ion-label>Título</ion-label>
+      <ion-input [(ngModel)]="titulo" name="titulo" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="fecha" name="fecha" required></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [(ngModel)]="descripcion" name="descripcion" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Foto</ion-label>
+      <ion-button (click)="onPhotoSelected()">Seleccionar Foto</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>Audio</ion-label>
+      <ion-button (click)="onAudioSelected()">Seleccionar Audio</ion-button>
+    </ion-item>
+    <ion-button expand="full" type="submit">Guardar</ion-button>
+  </form>
+</ion-content>

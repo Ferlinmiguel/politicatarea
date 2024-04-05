@@ -1,0 +1,21 @@
+<!-- evento-detalle.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ evento.titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="evento.foto" />
+    <h2>caca</h2>
+    <ion-card-header>
+      <ion-card-title>{{ evento.titulo }}</ion-card-title>
+      <ion-card-subtitle>{{ evento.fecha | date }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ evento.descripcion }}</p>
+      <!-- Aquí puedes agregar un reproductor de audio para el audio del evento -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>
