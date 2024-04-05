@@ -1,0 +1,7 @@
+{
+  "name": "EleccionesApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
